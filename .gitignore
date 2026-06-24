@@ -1,0 +1,22 @@
+.venv/
+
+.artifact-order.json
+.ve/
+
+# Internal agent/VE tooling and design docs — not part of the candidate-facing repo
+.agents/
+.claude/
+docs/trunk/
+docs/chunks/
+docs/narratives/
+
+# Python / uv environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Challenge data — provided separately, not committed to this repo
+output/*.parquet
+output/*.csv
+output/_staging/

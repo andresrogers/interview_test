@@ -1,0 +1,13 @@
+[project]
+name = "cloud-cost-challenges"
+version = "0.1.0"
+description = "Candidate analysis challenges over an anonymized AWS hourly cost & usage dataset."
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.1",
+    "pandas>=2.2",
+    "pyarrow>=16",
+    "matplotlib>=3.9",
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+]
