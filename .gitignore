@@ -1,5 +1,3 @@
-.venv/
-
 .artifact-order.json
 .ve/
 
@@ -20,3 +18,8 @@ __pycache__/
 output/*.parquet
 output/*.csv
 output/_staging/
+
+# other
+planning/
+.ignore
+.opencode/
