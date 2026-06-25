@@ -1,0 +1,23 @@
+{
+  "challenge": "challenge_03_window_sensitivity",
+  "trust_level": "medium",
+  "warnings": [
+    "Found 13 off-hour `Unused Commitment` rows; analysis uses normalized hourly buckets while preserving raw timestamps.",
+    "Window sensitivity spread in optimal commitment is $11.71/hour across evaluated windows."
+  ],
+  "headline": {
+    "recommended_window_rule": "Use the most recent 3 complete months as the primary sizing window.",
+    "recommended_window_label": "trailing_03m",
+    "recommended_commitment_per_hour": 23.142084386250154,
+    "window_count": 13,
+    "optimal_commitment_spread_per_hour": 11.709529838373626
+  },
+  "regime_change": {
+    "billing_period": "2025-12",
+    "eligible_on_demand_cost": 25360.732184344295,
+    "eligible_discounted_cost": 14716.773677273937,
+    "gross_savings_if_fully_covered": 10643.958507070032,
+    "discounted_cost_change": 4912.260722754556,
+    "discounted_cost_change_pct": 0.5010203714902792
+  }
+}
