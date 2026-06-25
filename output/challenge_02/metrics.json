@@ -1,0 +1,46 @@
+{
+  "challenge": "challenge_02_optimal_commitment",
+  "trust_level": "medium",
+  "warnings": [
+    "Found 13 off-hour `Unused Commitment` rows; analysis uses normalized hourly buckets while preserving raw timestamps.",
+    "Excluded partial billing periods from optimization: 2026-06",
+    "Used only the most recent three complete periods: 2026-03, 2026-04, 2026-05; older complete periods kept out of scope."
+  ],
+  "window": {
+    "billing_periods_included": [
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "billing_periods_excluded_partial": [
+      "2026-06"
+    ],
+    "billing_periods_excluded_complete": [
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02"
+    ]
+  },
+  "headline": {
+    "commitment_per_hour": 23.142084386250154,
+    "total_savings_dollars": 38581.81693267285,
+    "total_unused_commitment_waste": 299.8871399806566,
+    "total_consumed_commitment": 50797.83518486037,
+    "total_paid_commitment": 51097.72232484034,
+    "total_eligible_on_demand_cost": 95350.76545173008,
+    "total_covered_on_demand_cost": 89679.53925751314,
+    "effective_savings_rate": 0.40463038497791953,
+    "coverage_rate": 0.9405224890712816,
+    "average_utilization": 0.9941311055300368
+  },
+  "hourly_profile": {
+    "hours_in_window": 2208,
+    "negative_hours_at_optimum": 0,
+    "idle_compute_hours": 0
+  }
+}
