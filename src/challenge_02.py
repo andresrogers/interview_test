@@ -4,6 +4,7 @@ Assemble minimal Challenge 2 metrics and report text.
 Owns:
 - Challenge 2 window selection.
 - Optimizer input validation messages.
+- Shared Compute Savings Plan pricing join and window preparation.
 - Challenge 2 markdown and metrics payloads.
 
 Does Not Own:
@@ -12,7 +13,12 @@ Does Not Own:
 
 Main Entry Points:
 - choose_analysis_window
+- analysis_hours
+- duplicate_price_keys
+- load_optimizer_input
+- valid_optimizer_rows
 - validate_optimizer_inputs
+- service_summary_frame
 - build_metrics
 - build_report_texts
 
@@ -30,6 +36,7 @@ from __future__ import annotations
 
 from typing import Any
 
+import duckdb
 import pandas as pd
 
 
@@ -41,6 +48,94 @@ def choose_analysis_window(periods: pd.DataFrame, month_count: int = 3) -> tuple
     included = complete[-month_count:]
     excluded = complete[:-month_count]
     return included, partial, excluded
+
+
+def analysis_hours(included_periods: list[str]) -> pd.DatetimeIndex:
+    start = pd.Timestamp(f"{included_periods[0]}-01 00:00:00")
+    end = pd.Timestamp(f"{included_periods[-1]}-01 00:00:00") + pd.offsets.MonthBegin(1)
+    return pd.date_range(start, end, freq="h", inclusive="left")
+
+
+def duplicate_price_keys(
+    con: duckdb.DuckDBPyConnection,
+    term_months: int,
+    payment_option: str,
+    offering_class: str,
+) -> int:
+    stmt = f"""
+    select count(*)
+    from (
+      select price_list_key
+      from pricing
+      where lower(instrument_type) = 'compute_savings_plan'
+        and term_months = {term_months}
+        and lower(payment_option) = '{payment_option}'
+        and lower(offering_class) = '{offering_class}'
+      group by 1
+      having count(*) > 1
+    )
+    """
+    row = con.execute(stmt).fetchone()
+    return 0 if row is None else int(row[0])
+
+
+def load_optimizer_input(
+    con: duckdb.DuckDBPyConnection,
+    included_periods: list[str],
+    term_months: int,
+    payment_option: str,
+    offering_class: str,
+) -> pd.DataFrame:
+    period_list = ", ".join(f"'{period}'" for period in included_periods)
+    stmt = f"""
+    select
+      usage.analysis_timestamp,
+      usage.billing_period,
+      usage.product_code,
+      usage.usage_type,
+      usage.instance_type,
+      usage.usage_amount,
+      usage.on_demand_cost,
+      usage.amortized_cost,
+      usage.price_list_key,
+      usage.commitment_key,
+      usage.commitment,
+      usage.cost_type,
+      pricing.rate as discounted_rate,
+      case
+        when usage.usage_amount > 0 then usage.on_demand_cost / usage.usage_amount
+      end as on_demand_rate,
+      usage.usage_amount * pricing.rate as discounted_cost,
+      usage.on_demand_cost - usage.usage_amount * pricing.rate as gross_savings_if_fully_covered,
+      case
+        when usage.usage_amount > 0 and usage.on_demand_cost > 0 and pricing.rate is not null
+        then 1 - pricing.rate / (usage.on_demand_cost / usage.usage_amount)
+      end as discount_pct
+    from usage_ready as usage
+    left join pricing
+      on usage.price_list_key = pricing.price_list_key
+     and lower(pricing.instrument_type) = 'compute_savings_plan'
+     and pricing.term_months = {term_months}
+     and lower(pricing.payment_option) = '{payment_option}'
+     and lower(pricing.offering_class) = '{offering_class}'
+    where usage.billing_period in ({period_list})
+      and usage.commitment_key like 'AWS#Compute%'
+      and coalesce(usage.cost_type, '') != 'Spot Usage'
+    order by usage.analysis_timestamp, discount_pct desc, discounted_cost desc
+    """
+    return con.execute(stmt).df()
+
+
+def valid_optimizer_rows(joined: pd.DataFrame) -> pd.DataFrame:
+    mask = (
+        (joined["usage_amount"] > 0)
+        & joined["discounted_rate"].notna()
+        & joined["on_demand_rate"].notna()
+        & (joined["discounted_cost"] >= 0)
+        & (joined["gross_savings_if_fully_covered"] >= -1e-9)
+        & (joined["discounted_rate"] <= joined["on_demand_rate"] + 1e-9)
+    )
+    return joined.loc[mask].copy()
 
 
 def validate_optimizer_inputs(joined: pd.DataFrame, eligible_usage: pd.DataFrame, duplicate_price_keys: int) -> tuple[list[str], pd.DataFrame]:
@@ -64,6 +159,15 @@ def validate_optimizer_inputs(joined: pd.DataFrame, eligible_usage: pd.DataFrame
     if bool(joined["cost_type"].eq("Unused Commitment").any()):
         warnings.append("Historical `Unused Commitment` rows were excluded from the optimizer because they are waste evidence, not coverable usage.")
     return warnings, quarantined
+
+
+def service_summary_frame(eligible_usage: pd.DataFrame) -> pd.DataFrame:
+    summary = eligible_usage.groupby("product_code", as_index=False).agg(
+        on_demand_cost=("on_demand_cost", "sum"),
+        discounted_cost=("discounted_cost", "sum"),
+        gross_savings_if_fully_covered=("gross_savings_if_fully_covered", "sum"),
+    )
+    return pd.DataFrame(summary).sort_values(by="gross_savings_if_fully_covered", ascending=False)
 
 
 def _as_float(value: float | None) -> float:

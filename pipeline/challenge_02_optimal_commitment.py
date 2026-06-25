@@ -36,7 +36,17 @@ import duckdb
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from src.challenge_02 import build_metrics, build_report_texts, choose_analysis_window, validate_optimizer_inputs
+from src.challenge_02 import (
+    analysis_hours,
+    build_metrics,
+    build_report_texts,
+    choose_analysis_window,
+    duplicate_price_keys,
+    load_optimizer_input,
+    service_summary_frame,
+    valid_optimizer_rows,
+    validate_optimizer_inputs,
+)
 from src.commitments import build_hourly_inputs, evaluate_commitment, hourly_summary, optimize_commitment
 from src.cost_data import connect, load_pricing, load_usage
 from src.data_quality import (
@@ -65,33 +75,9 @@ def write_text(path: Path, text: str) -> None:
     path.write_text(text.strip() + "\n", encoding="utf-8")
 
 
-def _duplicate_price_keys(con: duckdb.DuckDBPyConnection) -> int:
-    stmt = f"""
-    select count(*)
-    from (
-      select price_list_key
-      from pricing
-      where lower(instrument_type) = 'compute_savings_plan'
-        and term_months = {TERM_MONTHS}
-        and lower(payment_option) = '{PAYMENT_OPTION}'
-        and lower(offering_class) = '{OFFERING_CLASS}'
-      group by 1
-      having count(*) > 1
-    )
-    """
-    row = con.execute(stmt).fetchone()
-    return 0 if row is None else int(row[0])
-
-
 def _headline_float(optimum: dict[str, float | None], key: str) -> float:
     value = optimum.get(key)
     return 0.0 if value is None else float(value)
-
-
-def _analysis_hours(included_periods: list[str]) -> pd.DatetimeIndex:
-    start = pd.Timestamp(f"{included_periods[0]}-01 00:00:00")
-    end = pd.Timestamp(f"{included_periods[-1]}-01 00:00:00") + pd.offsets.MonthBegin(1)
-    return pd.date_range(start, end, freq="h", inclusive="left")
 
 
 def write_tables(periods, joined, quarantined, service_summary, curve, hourly) -> None:
@@ -115,66 +101,6 @@ def commitment_options_frame(hourly_inputs, optimum: dict[str, float | None]) ->
         seen.add(rounded)
         rows.append(evaluate_commitment(candidate, hourly_inputs))
     return pd.DataFrame(rows)
-
-
-def load_optimizer_input(con: duckdb.DuckDBPyConnection, included_periods: list[str]) -> pd.DataFrame:
-    period_list = ", ".join(f"'{period}'" for period in included_periods)
-    stmt = f"""
-    select
-      usage.analysis_timestamp,
-      usage.billing_period,
-      usage.product_code,
-      usage.usage_type,
-      usage.instance_type,
-      usage.usage_amount,
-      usage.on_demand_cost,
-      usage.price_list_key,
-      usage.commitment_key,
-      usage.cost_type,
-      pricing.rate as discounted_rate,
-      case
-        when usage.usage_amount > 0 then usage.on_demand_cost / usage.usage_amount
-      end as on_demand_rate,
-      usage.usage_amount * pricing.rate as discounted_cost,
-      usage.on_demand_cost - usage.usage_amount * pricing.rate as gross_savings_if_fully_covered,
-      case
-        when usage.usage_amount > 0 and usage.on_demand_cost > 0 and pricing.rate is not null
-        then 1 - pricing.rate / (usage.on_demand_cost / usage.usage_amount)
-      end as discount_pct
-    from usage_ready as usage
-    left join pricing
-      on usage.price_list_key = pricing.price_list_key
-     and lower(pricing.instrument_type) = 'compute_savings_plan'
-     and pricing.term_months = {TERM_MONTHS}
-     and lower(pricing.payment_option) = '{PAYMENT_OPTION}'
-     and lower(pricing.offering_class) = '{OFFERING_CLASS}'
-    where usage.billing_period in ({period_list})
-      and usage.commitment_key like 'AWS#Compute%'
-      and coalesce(usage.cost_type, '') != 'Spot Usage'
-    order by usage.analysis_timestamp, discount_pct desc, discounted_cost desc
-    """
-    return con.execute(stmt).df()
-
-
-def valid_optimizer_rows(joined: pd.DataFrame) -> pd.DataFrame:
-    mask = (
-        (joined["usage_amount"] > 0)
-        & joined["discounted_rate"].notna()
-        & joined["on_demand_rate"].notna()
-        & (joined["discounted_cost"] >= 0)
-        & (joined["gross_savings_if_fully_covered"] >= -1e-9)
-        & (joined["discounted_rate"] <= joined["on_demand_rate"] + 1e-9)
-    )
-    return joined.loc[mask].copy()
-
-
-def service_summary_frame(eligible_usage: pd.DataFrame) -> pd.DataFrame:
-    summary = eligible_usage.groupby("product_code", as_index=False).agg(
-        on_demand_cost=("on_demand_cost", "sum"),
-        discounted_cost=("discounted_cost", "sum"),
-        gross_savings_if_fully_covered=("gross_savings_if_fully_covered", "sum"),
-    )
-    return pd.DataFrame(summary).sort_values(by="gross_savings_if_fully_covered", ascending=False)
 
 
 def write_reports(metrics, hourly, service_summary) -> None:
@@ -245,13 +171,16 @@ def main() -> None:
     periods = billing_period_completeness(con)
     included_periods, partial_periods, excluded_complete_periods = choose_analysis_window(periods)
 
-    joined = load_optimizer_input(con, included_periods)
+    joined = load_optimizer_input(con, included_periods, TERM_MONTHS, PAYMENT_OPTION, OFFERING_CLASS)
     eligible_usage = valid_optimizer_rows(joined)
-    validation_warnings, quarantined = validate_optimizer_inputs(joined, eligible_usage, _duplicate_price_keys(con))
+    validation_warnings, quarantined = validate_optimizer_inputs(
+        joined,
+        eligible_usage,
+        duplicate_price_keys(con, TERM_MONTHS, PAYMENT_OPTION, OFFERING_CLASS),
+    )
     validation_warnings.extend(issue_messages(issues, "warning"))
 
-    analysis_hours = _analysis_hours(included_periods)
-    hourly_inputs = build_hourly_inputs(eligible_usage, analysis_hours)
+    hourly_inputs = build_hourly_inputs(eligible_usage, analysis_hours(included_periods))
     curve, optimum = optimize_commitment(hourly_inputs)
     hourly = hourly_summary(_headline_float(optimum, "commitment_per_hour"), hourly_inputs)
     service_summary = service_summary_frame(eligible_usage)
