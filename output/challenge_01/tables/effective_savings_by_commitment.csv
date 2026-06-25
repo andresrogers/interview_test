@@ -1,0 +1,218 @@
+commitment,commitment_key,cost_type,on_demand_cost,amortized_cost,savings_dollars,effective_savings_rate
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute,Usage with Discount,45022.22989874482,24653.165222678064,20369.06467606676,0.4524223860496663
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-west-3#r5a#RunInstances#shared,Usage with Discount,19363.418859719328,10195.45528330957,9167.963576409758,0.47346822597952354
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute,Usage with Discount,18230.805353735435,10547.165927395612,7683.639426339823,0.4214646186634574
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-11-12-21-07-48-094,AWS#AmazonRDS-Database Instance#eu-central-1#r6g#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,22053.721541388903,14592.600000000377,7461.121541388526,0.3383157589700227
+No Commitment,None,Spot Usage,12108.62980931018,5235.509150930691,6873.120658379488,0.5676216687287631
+No Commitment,None,On Demand Usage,529128.9796029121,524286.4470680951,4842.532534817001,0.009151894380177604
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute,Usage with Discount,9685.900620099943,5789.825386521772,3896.075233578171,0.40224191702866857
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2022-02-14-20-06-54-687,AWS#AmazonRDS-Database Instance#eu-central-1#m6g#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,12862.280243195279,9199.008000000435,3663.272243194844,0.28480737271549333
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-09-08-19-50-58-286,AWS#AmazonRDS-Database Instance#eu-central-1#t4g#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,10891.42586899464,7322.831999969684,3568.593869024956,0.32765166948286484
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,Usage with Discount,7726.792235718654,4401.08526828335,3325.7069674353043,0.4304123711339815
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,7207.326877537314,4113.498476685314,3093.8284008520004,0.4292615630483429
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-central-1#c6i#RunInstances#shared,Usage with Discount,6238.010830000083,3236.6915987000984,3001.3192312999845,0.4811340206185478
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute,Usage with Discount,6185.841256165741,3711.504753705791,2474.3365024599498,0.399999999998974
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,5504.808683734083,3149.681473477617,2355.1272102564662,0.4278308921462662
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute,Usage with Discount,5283.848545518928,3140.9691805955363,2142.879364923392,0.4055527607317025
+arn:aws:savingsplans::559750980952:savingsplan/14ca4d5b-b9df-8430-2119-7e805f38ec7c,AWS#Compute,Usage with Discount,5264.955583643771,3159.6325565082648,2105.3230271355064,0.39987479356444144
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-central-1#m6a#RunInstances#shared,Usage with Discount,4159.762548750154,2163.639200011018,1996.1233487391355,0.47986473394710777
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-west-3#m6a#RunInstances#shared,Usage with Discount,3509.722384659405,1844.2328081942946,1665.4895764651105,0.4745359871609147
+arn:aws:savingsplans::527480136527:savingsplan/cab8d140-aab9-763d-5f44-cfa246321d27,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,4312.589337662532,2711.7880670015174,1600.8012706610143,0.37119260502755524
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,3313.001749719292,1902.4828720451985,1410.5188776740936,0.42575253025254384
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2024-12-03-10-40-13-420,AWS#AmazonRDS-Database Instance#eu-central-1#m6g#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,4570.387500000241,3265.0800000000527,1305.3075000001882,0.28560105680319653
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,Usage with Discount,3015.80054164521,1717.762679652904,1298.0378619923063,0.43041237113253766
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-west-3#r5#RunInstances#shared,Usage with Discount,2500.8396210283995,1305.3355556556917,1195.5040653727078,0.4780410768128708
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,Usage with Discount,2722.0136915528024,1601.2419279999042,1120.7717635528982,0.41174361724593006
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,2502.0578171386014,1426.9636426350944,1075.094174503507,0.429683985373689
+arn:aws:savingsplans::662505700522:savingsplan/ed57fe40-deab-c41e-ba1c-28fe6a8746ef,AWS#Compute-EC2#eu-west-3#r5a#RunInstances#shared,Usage with Discount,3901.3457132443127,2834.325685964344,1067.0200272799689,0.2735005061606416
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,2110.537088763498,1202.0586421021976,908.4784466613005,0.43044893714402876
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,Usage with Discount,2026.2381883251046,1157.8503933263873,868.3877949987173,0.428571428572536
+arn:aws:savingsplans::527480136527:savingsplan/5904150c-b018-4c2d-9a81-9f6f355a89e1,AWS#Compute-EC2#eu-west-3#r5#RunInstances#shared,Usage with Discount,2234.8285683161957,1408.0930000000058,826.73556831619,0.36993243241878004
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-west-3#c5a#RunInstances#shared,Usage with Discount,1705.872848824707,949.008933754398,756.8639150703091,0.4436813186819666
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,Usage with Discount,1679.2331148065994,956.4704081761984,722.762706630401,0.43041237113385716
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,1703.5301733570507,994.8998682201081,708.6303051369425,0.4159775483990899
+arn:aws:elasticache:eu-west-3:527480136527:reserved-instance:ri-2021-12-24-02-33-41-305,AWS#AmazonElastiCache-Cache Instance#eu-west-3#m7g#CreateCacheCluster:0002#unknown-tenancy,Usage with Discount,2102.0999999999904,1432.2000000000153,669.8999999999751,0.3186813186813083
+arn:aws:savingsplans::527480136527:savingsplan/dabfdc27-c2b1-f42d-1b84-da1967c90456,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,1675.8143043941907,1053.6330000000005,622.1813043941902,0.3712710309028599
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,Usage with Discount,1308.7257608156992,745.4340029380998,563.2917578775995,0.43041237113458547
+arn:aws:savingsplans::662505700522:savingsplan/74c6fcdb-c971-62b5-6550-7ac3bde8f89f,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,1390.5827867485898,880.0117821450968,510.57100460349295,0.36716332854751604
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,1185.039433909201,676.572108743499,508.46732516570205,0.4290720718789695
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-central-1#m5a#RunInstances#shared,Usage with Discount,1224.7320132834952,737.4888685726027,487.2431447108926,0.39783653846411526
+arn:aws:elasticache:eu-central-1:559750980952:reserved-instance:id-3b2c4092-4420-0ba5-fdb1-f8a87e2b8fef,AWS#AmazonElastiCache-Cache Instance#eu-central-1#m6g#CreateCacheCluster:0002#unknown-tenancy,Usage with Discount,1481.8439999999991,1013.0119999999959,468.8320000000033,0.31638418079096287
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-06-15-07-23-35-970,AWS#AmazonRDS-Database Instance#eu-central-1#m5#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,1616.287999999949,1154.2735999999984,462.0143999999507,0.2858490566037521
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,Usage with Discount,1093.3463153739929,642.5475125467966,450.79880282719625,0.4123110824889869
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-west-1#g5.4xlarge#RunInstances#shared,Usage with Discount,962.2266195615002,519.6024807207,442.62413884080024,0.4599998896751683
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute,Usage with Discount,1086.325879994702,663.7804916542972,422.5453883404049,0.38896743244528575
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,Usage with Discount,1008.93019415089,589.9676559018037,418.96253824908626,0.4152542372881236
+No Commitment,AWS#Database,On Demand Usage,27870.401008255365,27457.58584505773,412.81516319763614,0.014811956350228259
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,Usage with Discount,894.9192802796008,509.7349508805997,385.1843293990011,0.4304123711343636
+arn:aws:savingsplans::527480136527:savingsplan/1efce2ef-7ba3-e057-7379-e60c1eda55b5,AWS#Compute-EC2#eu-west-3#r5a#RunInstances#shared,Usage with Discount,973.1613970607949,612.7989999999986,360.3623970607963,0.3703007519093813
+arn:aws:savingsplans::527480136527:savingsplan/d6db1c6b-570a-bf0e-2daf-1b95e174970f,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,Usage with Discount,903.0307105287947,568.6159999999992,334.41471052879547,0.37032484790353326
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,Usage with Discount,724.5505113303959,426.1709921909988,298.37951913939713,0.4118132752284205
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,Usage with Discount,589.6083059657998,336.91903196839945,252.68927399740033,0.4285714285918787
+arn:aws:savingsplans::527480136527:savingsplan/450993cf-80c3-57bf-f7ca-4a2a5b89a6c1,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,667.3893021773029,420.53659909919577,246.85270307810708,0.3698781240166278
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-west-1#g5.4xlarge#RunInstances#shared,Usage with Discount,494.62858104329985,267.0994883325,227.52909271079983,0.4599998896765772
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,Usage with Discount,522.6551715405008,297.6979198677994,224.95725167270137,0.43041237114262315
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-west-3#c5a#RunInstances#shared,Usage with Discount,501.5807202623,279.0387248712002,222.54199539109982,0.44368131868131255
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,533.0505639706997,311.19539918480166,221.85516478589807,0.41619909963755863
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-west-3#c5a#RunInstances#shared,Usage with Discount,453.5537820144998,252.32044191860024,201.23334009589956,0.4436813186786882
+arn:aws:elasticache:eu-west-3:662505700522:reserved-instance:ri-2023-07-02-22-20-36-748,AWS#AmazonElastiCache-Cache Instance#eu-west-3#t3#CreateCacheCluster:0002#unknown-tenancy,Usage with Discount,612.4079999999989,419.0160000000048,193.39199999999408,0.31578947368420146
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,AWS#AmazonRDS-Database Instance#eu-central-1#r6g#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,556.3237398255012,368.1777895199997,188.14595030550151,0.33819507750022704
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-central-1#m5#RunInstances#shared,Usage with Discount,461.89537745470005,279.1454672444999,182.74991021020014,0.3956521739127453
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2024-08-05-10-43-55-091,AWS#AmazonRDS-Database Instance#eu-west-3#r5#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,539.7839999999973,357.10199999999975,182.68199999999752,0.33843537414965696
+arn:aws:rds:eu-west-3:662505700522:ri:ri-2024-12-18-00-19-16-764,AWS#AmazonRDS-Database Instance#eu-west-3#t3#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,597.8564999999766,419.7311999999886,178.125299999988,0.2979398902579381
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-west-1#g5.4xlarge#RunInstances#shared,Usage with Discount,380.20038986470007,205.30825247640007,174.8921373883,0.45999988966486316
+arn:aws:savingsplans::527480136527:savingsplan/cac09992-4bf9-3209-ef4b-59df8b3feb5a,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,Usage with Discount,467.76014305359774,294.3570000003986,173.40314305319913,0.3707095305752246
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-west-3#c5a#RunInstances#shared,Usage with Discount,339.15853460089966,188.6802287266002,150.47830587429945,0.44368131868293637
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-central-1#m5#RunInstances#shared,Usage with Discount,367.1551988845001,221.88994629160013,145.2652525929,0.39565081206598307
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-central-1#m5a#RunInstances#shared,Usage with Discount,335.32566847399994,201.92086527140006,133.40480320259988,0.3978365384603525
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,Usage with Discount,307.55848723559996,175.7477069855998,131.81078025000016,0.42857142859149505
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,Usage with Discount,307.40863031329917,175.66207446480013,131.74655584849904,0.42857142857124075
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,306.9147812842015,179.2304220902996,127.68435919390191,0.4160254473884946
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2024-04-06-12-21-55-317,AWS#AmazonRDS-Database Instance#eu-west-3#m5#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,396.34400000000375,274.6510000000007,121.69300000000305,0.3070388349514611
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute,Usage with Discount,279.32927858660014,167.23497822780007,112.09430035880007,0.4012980698836681
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,247.86174680130026,144.70629095389992,103.15545584740033,0.41618142847228246
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,Usage with Discount,227.8830272473002,130.21887270659983,97.66415454070037,0.428571428598386
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,Usage with Discount,232.61660712290092,136.795526748,95.82108037490093,0.41192708276531054
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-west-1#g5.4xlarge#RunInstances#shared,Usage with Discount,183.5410729866,99.11219966099999,84.42887332560001,0.4599998896800827
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,Usage with Discount,187.42252814929998,106.75355340480002,80.66897474449996,0.43041237113309777
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,Usage with Discount,193.766055878999,113.87370821249974,79.89234766649926,0.4123134328356748
+arn:aws:savingsplans::527480136527:savingsplan/a9d1bd04-6131-0469-3864-4b0a53404d40,AWS#Compute-EC2#eu-west-3#r5a#RunInstances#shared,Usage with Discount,214.0688596837005,134.79899999999932,79.26985968370118,0.3703007518273658
+No Commitment,AWS#Compute,On Demand Usage,46546.82209977046,46471.288619759594,75.53348001086852,0.0016227419317470654
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,Usage with Discount,157.19501704739974,91.91912013790005,65.27589690949969,0.41525423728804806
+arn:aws:savingsplans::559750980952:savingsplan/14ca4d5b-b9df-8430-2119-7e805f38ec7c,AWS#Compute-EC2#eu-central-1#m5#RunInstances#shared,Usage with Discount,141.59714200330006,85.57392495000002,56.023217053300044,0.3956521739117755
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,Usage with Discount,134.77366596460035,79.26992551410015,55.5037404505002,0.41182926985957935
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,Usage with Discount,131.5119310907995,77.10289313629787,54.40903795450163,0.413719405556718
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,Usage with Discount,117.60679133829967,68.7700729111001,48.83671842719957,0.41525423720403354
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,113.05854549059904,64.5395646531999,48.51898083739914,0.4291491689271162
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2025-05-07-19-33-37-706,AWS#AmazonRDS-Database Instance#eu-west-3#t3#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,157.7680000000011,110.822400000001,46.94560000000011,0.2975609756097547
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,Usage with Discount,110.38059136959968,64.86919082350005,45.51140054609964,0.412313432836292
+arn:aws:rds:eu-west-3:662505700522:ri:ri-2020-12-12-17-00-30-177,AWS#AmazonRDS-Database Instance#eu-west-3#t3#CreateDBInstance:0014#unknown-tenancy,Usage with Discount,146.0384999999992,101.3471999999966,44.6913000000026,0.30602409638556166
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute,Usage with Discount,109.78760710010059,66.55210196820012,43.23550513190047,0.39381043338051636
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2024-12-21-18-03-25-155,AWS#AmazonRDS-Database Instance#eu-west-3#t3#CreateDBInstance:0002#unknown-tenancy,Usage with Discount,135.30117375199916,95.42293310000159,39.87824065199757,0.2947368418628249
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,89.42937724449993,52.212574015199976,37.216803229299956,0.4161585865408546
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,Usage with Discount,63.69069665880001,37.2428649954,26.44783166340001,0.4152542372881357
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,Usage with Discount,62.128274149400085,36.54741146359996,25.580862685800128,0.41174268939590586
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,Usage with Discount,60.40932383409975,35.41778900879959,24.991534825300164,0.413703270275523
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,58.65098875080001,34.241675631899994,24.409313118900016,0.41617905578048875
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,Usage with Discount,58.78102626430019,34.56469519759989,24.2163310667003,0.41197530233336094
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,Usage with Discount,56.289127371300005,32.1652156406,24.1239117307,0.42857142857396646
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,Usage with Discount,55.560062987600034,32.65190268850001,22.908160299100025,0.4123134328377687
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2025-05-16-02-02-53-030,AWS#AmazonRDS-Database Instance#eu-west-3#t3#CreateDBInstance:0002#unknown-tenancy,Usage with Discount,69.76800000000033,49.204799999999686,20.56320000000064,0.29473684210527096
+arn:aws:savingsplans::662505700522:savingsplan/ed57fe40-deab-c41e-ba1c-28fe6a8746ef,AWS#Compute-EC2#eu-west-3#m6a#RunInstances#shared,Usage with Discount,83.82029876780027,63.5684704051001,20.251828362700167,0.24161007131222426
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,Usage with Discount,43.8924004713,25.665895192799994,18.226505278500007,0.41525423724359306
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,Usage with Discount,38.41269111000001,22.461658361599994,15.951032748400017,0.4152542372707511
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,Usage with Discount,37.649682114,22.126212436899998,15.523469677100003,0.4123134328225208
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-central-1#m5a#RunInstances#shared,Usage with Discount,38.78710214130007,23.356175690600004,15.430926450700063,0.3978365384061365
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-west-3#t2#RunInstances#shared,Usage with Discount,36.74133430440004,21.467237941100024,15.274096363300018,0.4157196969700372
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,Usage with Discount,35.219189448199955,20.06041460959999,15.158774838599964,0.43041237109943553
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,Usage with Discount,35.11701859089999,19.995976392799996,15.121042198099993,0.430590147023995
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-central-1#m5#RunInstances#shared,Usage with Discount,35.331706747500064,21.35264017049999,13.979066577000076,0.3956521737515321
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,Usage with Discount,28.94400000000001,17.01,11.934000000000008,0.41231343283582106
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,AWS#Compute-EC2#eu-west-3#t2#RunInstances#shared,Usage with Discount,24.963810643199984,14.585862847400014,10.37794779579997,0.4157196969696961
+arn:aws:savingsplans::527480136527:savingsplan/450993cf-80c3-57bf-f7ca-4a2a5b89a6c1,AWS#Compute-EC2#eu-west-3#t3a.large#RunInstances:0002#shared,Usage with Discount,33.611170701199974,24.20840090079997,9.402769800400005,0.27975133279318687
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,Usage with Discount,22.299454167399986,13.041514930899957,9.257939236500029,0.4151643877469608
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-west-3#c5a#RunInstances#shared,Usage with Discount,18.3378995184,10.201716078099999,8.136183440300002,0.44368131868844984
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,19.042057657000004,11.116324850499982,7.925732806500022,0.4162224980758034
+arn:aws:savingsplans::662505700522:savingsplan/ed57fe40-deab-c41e-ba1c-28fe6a8746ef,AWS#Compute-EC2#eu-west-3#r5#RunInstances#shared,Usage with Discount,23.381536523400005,16.905843631000007,6.475692892399998,0.2769575423719134
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-west-3#t2#RunInstances#shared,Usage with Discount,15.516301245699994,9.065820041600004,6.45048120409999,0.4157228647444313
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,Usage with Discount,13.575256605099998,7.921561501599999,5.653695103499999,0.41647058821532695
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-west-3#r5a#RunInstances#shared,Usage with Discount,11.5493270144,6.0873914959,5.461935518499999,0.4729224059280611
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-west-3#c5a#RunInstances#shared,Usage with Discount,10.3252775528,5.7441447924,4.581132760399999,0.4436813186835536
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,Usage with Discount,11.024119101700002,6.4542339155000095,4.5698851861999925,0.4145351790961041
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,Usage with Discount,8.544913084200001,5.021730637200001,3.523182447,0.4123134328322838
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,Usage with Discount,6.533530103699998,3.733445773400001,2.8000843302999967,0.42857142859329345
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,Usage with Discount,6.552225870500002,3.8464900434999976,2.7057358270000043,0.4129491077500857
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,Usage with Discount,5.771682055000004,3.3756280055000016,2.3960540495000022,0.4151396467558885
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,AWS#Compute-EC2#eu-west-3#t2#RunInstances#shared,Usage with Discount,5.589799743499999,3.2642330761,2.3255666673999986,0.4160375637972082
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,Usage with Discount,4.809525497900001,2.8278139530000006,1.9817115449000005,0.41203888944247863
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,Usage with Discount,3.916102582600004,2.2944931732000007,1.6216094094000035,0.4140875718131403
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,Usage with Discount,3.1941281581,1.8677529055000004,1.3263752525999994,0.4152542374470605
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,Usage with Discount,2.8277126226000004,1.6618087238,1.1659038988000003,0.41231343294283745
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-west-3#c5a#RunInstances#shared,Usage with Discount,2.5629372258000007,1.4258098587000005,1.1371273671000002,0.4436813183144019
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,AWS#Compute-EC2#eu-west-1#g5.4xlarge#RunInstances#shared,Usage with Discount,2.2040156748,1.1901687074999998,1.0138469673000001,0.4599998896976992
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,Usage with Discount,2.047477151800001,1.1951616719000004,0.8523154799000003,0.4162759419076805
+arn:aws:savingsplans::559750980952:savingsplan/14ca4d5b-b9df-8430-2119-7e805f38ec7c,AWS#Compute-EC2#eu-west-3#t3a.large#RunInstances:0002#shared,Usage with Discount,2.6109777394,1.7924385369000002,0.8185392024999998,0.31349911190284574
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,Usage with Discount,1.1340097503,0.6630139183,0.47099583199999995,0.41533666873269737
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-west-3#t2#RunInstances#shared,Usage with Discount,0.7700996858,0.44993292439999993,0.32016676140000006,0.4157471653392539
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,AWS#Compute-EC2#eu-west-3#t2#RunInstances#shared,Usage with Discount,0.6014146668,0.3508252223,0.2505894445,0.41666666666666663
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#us-east-1#t3#RunInstances#shared,Usage with Discount,0.4947973471999999,0.24502836800000005,0.24976897919999985,0.5047904573729289
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,AWS#Compute-EC2#eu-west-1#g5.4xlarge#RunInstances#shared,Usage with Discount,0.32577771120000004,0.17592000000000002,0.14985771120000002,0.45999988964254224
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,AWS#Compute-EC2#eu-west-1#g5.4xlarge#RunInstances#shared,Usage with Discount,0.2414226107,0.1303682364,0.11105437430000001,0.4599998897286384
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,AWS#Compute-EC2#us-east-1#t2#RunInstances#shared,Usage with Discount,0.0004672248,0.0002336124,0.0002336124,0.5
+No Commitment,AWS#AmazonRDS-Database Instance#eu-central-1#t3#CreateDBInstance:0002#unknown-tenancy,On Demand Usage,0.00333332,0.00333332,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-central-1#t3#CreateCacheCluster:0002#unknown-tenancy,On Demand Usage,9465.154000000884,9465.154000000884,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-west-3#m5#CreateDBInstance:0002#unknown-tenancy,On Demand Usage,791.8020000000024,791.8020000000024,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-west-3#m5#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,427.4500000000029,427.4500000000029,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-central-1#m6gd#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,2682.7710920640147,2682.7710920640147,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-central-1#r6g#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,272.9878400679998,272.9878400679998,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-west-3#m6i#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,839.9899482480079,839.9899482480079,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-central-1#t3#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,1171.1757207149942,1171.1757207149942,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-central-1#t3#CreateDBInstance:0016#unknown-tenancy,On Demand Usage,0.031999872,0.031999872,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-central-1#t4g#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,4191.857901546678,4191.857901546678,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-central-1#m6g#CreateCacheCluster:0002#unknown-tenancy,On Demand Usage,4210.476000000183,4210.476000000183,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-central-1#r7g#CreateCacheCluster:0002#unknown-tenancy,On Demand Usage,0.526,0.526,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-central-1#t2#CreateCacheCluster:0002#unknown-tenancy,On Demand Usage,1031.3009999999535,1031.3009999999535,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-west-3#t3#CreateDBInstance:0002#unknown-tenancy,On Demand Usage,441.31814322399003,441.31814322399003,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-central-1#t4g#CreateCacheCluster:Valkey#unknown-tenancy,On Demand Usage,694.6559999999859,694.6559999999859,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-west-3#m7g#CreateCacheCluster:0002#unknown-tenancy,On Demand Usage,2264.807999999988,2264.807999999988,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-west-3#r5#CreateCacheCluster:0002#unknown-tenancy,On Demand Usage,1115.2239999999906,1115.2239999999906,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-west-3#t3#CreateCacheCluster:0002#unknown-tenancy,On Demand Usage,336.9839999999987,336.9839999999987,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-central-1#m5#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,89.09135106399992,89.09135106399992,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-central-1#m6g#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,12236.64869927651,12236.64869927651,0.0,0.0
+No Commitment,AWS#AmazonES-Amazon OpenSearch Service Instance#eu-central-1#m4.large.search#ESDomain#unknown-tenancy,On Demand Usage,1205.4600000000107,1205.4600000000107,0.0,0.0
+No Commitment,AWS#AmazonES-Amazon OpenSearch Service Instance#eu-central-1#m6g.large.search#ESDomain#unknown-tenancy,On Demand Usage,2154.086999999995,2154.086999999995,0.0,0.0
+No Commitment,AWS#AmazonES-Amazon OpenSearch Service Instance#eu-central-1#r6g.large.search#ESDomain#unknown-tenancy,On Demand Usage,4375.521999999966,4375.521999999966,0.0,0.0
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-11-12-21-07-48-094,None,Unused Commitment,0.0,0.0,0.0,
+No Commitment,AWS#AmazonRDS-Database Instance#eu-west-3#r5#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,3281.782023071959,3281.782023071959,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-central-1#c5#RunInstances#shared,On Demand Usage,30.1365472031,30.1365472031,0.0,0.0
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-09-08-19-50-58-286,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:rds:eu-west-3:662505700522:ri:ri-2020-12-12-17-00-30-177,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:rds:eu-west-3:662505700522:ri:ri-2024-12-18-00-19-16-764,None,Unused Commitment,0.0,0.0,0.0,
+No Commitment,AWS#Compute-EC2#eu-west-3#t3a.large#RunInstances:0002#shared,On Demand Usage,414.06525155940125,414.06525155940125,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-west-3#t3a#RunInstances#shared,On Demand Usage,1079.516154307188,1079.516154307188,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-west-3#t3#RunInstances#shared,On Demand Usage,705.046192401194,705.046192401194,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-west-3#t2#RunInstances#shared,On Demand Usage,99.67892510249997,99.67892510249997,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-west-3#m5a#RunInstances#shared,On Demand Usage,1037.3232307667981,1037.3232307667981,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-west-3#m5#RunInstances#shared,On Demand Usage,89.83551655410002,89.83551655410002,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-central-1#t4g#RunInstances#shared,On Demand Usage,31.99966161029987,31.99966161029987,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-central-1#t3#RunInstances#shared,On Demand Usage,837.5986569623938,837.5986569623938,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-central-1#t2#RunInstances#shared,On Demand Usage,317.2098923934012,317.2098923934012,0.0,0.0
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2022-02-14-20-06-54-687,None,Unused Commitment,0.0,0.0,0.0,
+No Commitment,AWS#Database-OpenSearch#eu-central-1#r7g.xlarge.search#ESDomain#unknown-tenancy,On Demand Usage,6704.411999999722,6704.411999999722,0.0,0.0
+arn:aws:elasticache:eu-central-1:559750980952:reserved-instance:id-3b2c4092-4420-0ba5-fdb1-f8a87e2b8fef,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2024-12-03-10-40-13-420,None,Unused Commitment,0.0,0.0,0.0,
+No Commitment,AWS#Compute-EC2#eu-central-1#m5#RunInstances#shared,On Demand Usage,6393.807604128093,6393.807604128093,0.0,0.0
+No Commitment,AWS#Compute-EC2#eu-central-1#m5a#RunInstances#shared,On Demand Usage,1348.171323036994,1348.171323036994,0.0,0.0
+No Commitment,AWS#AmazonRDS-Database Instance#eu-west-3#t3#CreateDBInstance:0014#unknown-tenancy,On Demand Usage,360.55400000000253,360.55400000000253,0.0,0.0
+arn:aws:savingsplans::527480136527:savingsplan/a9d1bd04-6131-0469-3864-4b0a53404d40,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::559750980952:savingsplan/2697b084-02ab-5e6d-2b36-952c2292ddc0,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::559750980952:savingsplan/04742b4f-f47e-576f-f9d6-f681a4a2def8,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::559750980952:savingsplan/14ca4d5b-b9df-8430-2119-7e805f38ec7c,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::527480136527:savingsplan/cac09992-4bf9-3209-ef4b-59df8b3feb5a,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::527480136527:savingsplan/dabfdc27-c2b1-f42d-1b84-da1967c90456,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::527480136527:savingsplan/d6db1c6b-570a-bf0e-2daf-1b95e174970f,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::527480136527:savingsplan/1efce2ef-7ba3-e057-7379-e60c1eda55b5,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::662505700522:savingsplan/ed57fe40-deab-c41e-ba1c-28fe6a8746ef,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::559750980952:savingsplan/3a009073-162b-72c7-ca88-9c12cea624b7,None,Unused Commitment,0.0,0.0,0.0,
+No Commitment,AWS#AmazonES-Amazon OpenSearch Service Instance#eu-central-1#t2.small.search#ESDomain#unknown-tenancy,On Demand Usage,273.7979999999994,273.7979999999994,0.0,0.0
+No Commitment,AWS#AmazonES-Amazon OpenSearch Service Instance#eu-central-1#t3.medium.search#ESDomain#unknown-tenancy,On Demand Usage,3439.296000000112,3439.296000000112,0.0,0.0
+No Commitment,AWS#AmazonElastiCache-Cache Instance#eu-central-1#m5#CreateCacheCluster:0002#unknown-tenancy,On Demand Usage,10404.467999999852,10404.467999999852,0.0,0.0
+arn:aws:savingsplans::527480136527:savingsplan/5904150c-b018-4c2d-9a81-9f6f355a89e1,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::527480136527:savingsplan/450993cf-80c3-57bf-f7ca-4a2a5b89a6c1,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::417908285034:savingsplan/fa6ce1ab-3d42-0fda-9680-980310866d79,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::559750980952:savingsplan/eda5f203-29b6-c471-c841-9ad0b0c71d19,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::559750980952:savingsplan/884c727d-42b6-7899-4ee8-ffc9e2c58bdf,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:savingsplans::559750980952:savingsplan/bdfcc9b2-c4d1-da42-2a5e-dfc9da9d4512,None,Unused Commitment,0.0,0.0,0.0,
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2025-05-16-02-02-53-030,None,Unused Commitment,0.0,0.00948422,-0.00948422,
+arn:aws:elasticache:eu-west-3:662505700522:reserved-instance:ri-2023-07-02-22-20-36-748,None,Unused Commitment,0.0,0.02006333,-0.02006333,
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2025-05-07-19-33-37-706,None,Unused Commitment,0.0,0.034288,-0.034288,
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-06-15-07-23-35-970,None,Unused Commitment,0.0,0.04928911,-0.04928911,
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2024-08-05-10-43-55-091,None,Unused Commitment,0.0,0.06245611,-0.06245611,
+arn:aws:savingsplans::559750980952:savingsplan/4b0ebb17-590f-a713-6516-f67ec77f1962,None,Unused Commitment,0.0,0.21170592049999992,-0.21170592049999992,
+arn:aws:elasticache:eu-west-3:527480136527:reserved-instance:ri-2021-12-24-02-33-41-305,None,Unused Commitment,0.0,0.73304667,-0.73304667,
+arn:aws:savingsplans::662505700522:savingsplan/74c6fcdb-c971-62b5-6550-7ac3bde8f89f,None,Unused Commitment,0.0,3.256217856,-3.256217856,
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2024-12-21-18-03-25-155,None,Unused Commitment,0.0,7.729567150000001,-7.729567150000001,
+arn:aws:savingsplans::527480136527:savingsplan/cab8d140-aab9-763d-5f44-cfa246321d27,None,Unused Commitment,0.0,8.347932976,-8.347932976,
+arn:aws:elasticache:us-east-1:662505700522:reserved-instance:ri-2023-07-09-14-43-01-278,None,Unused Commitment,0.0,155.75528,-155.75528,
+arn:aws:rds:eu-west-3:527480136527:ri:ri-2024-04-06-12-21-55-317,None,Unused Commitment,0.0,274.79612916,-274.79612916,
+arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,0.0,6550.89765214,-6550.89765214,

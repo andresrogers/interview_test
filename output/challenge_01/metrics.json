@@ -1,0 +1,39 @@
+{
+  "challenge": "challenge_01_effective_savings_rate",
+  "trust_level": "medium",
+  "warnings": [
+    "Found 13 off-hour `Unused Commitment` rows; analysis uses normalized hourly buckets while preserving raw timestamps.",
+    "Excluded partial billing periods from headline metric: 2026-06"
+  ],
+  "window": {
+    "billing_periods_included": [
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "billing_periods_excluded": [
+      "2026-06"
+    ]
+  },
+  "headline": {
+    "on_demand_cost": 963836.6515702405,
+    "amortized_cost": 852808.2218011242,
+    "savings_dollars": 111028.42976911634,
+    "effective_savings_rate": 0.11519423917759683,
+    "commitment_savings_dollars": 105826.33104474697,
+    "spot_savings_vs_on_demand_dollars": 6873.120658379488,
+    "waste_dollars": 7001.9031126425,
+    "other_reconciliation_dollars": 5330.881178618196
+  },
+  "reconciliation": {
+    "monthly_savings_minus_headline_savings": 2.9103830456733704e-11
+  }
+}
