@@ -10,4 +10,5 @@ dependencies = [
     "matplotlib>=3.9",
     "jupyterlab>=4.2",
     "ipykernel>=6.29",
+    "pytest>=8.2",
 ]

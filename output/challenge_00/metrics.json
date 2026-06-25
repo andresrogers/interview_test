@@ -1,0 +1,28 @@
+{
+  "trust_level": "medium",
+  "warnings": [
+    "Found 13 off-hour `Unused Commitment` rows; analysis uses normalized hourly buckets while preserving raw timestamps."
+  ],
+  "fatal_issues": [],
+  "usage_row_count": 20901528,
+  "pricing_row_count": 10955,
+  "normalized_row_count": 13,
+  "complete_billing_periods": [
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05"
+  ],
+  "partial_billing_periods": [
+    "2026-06"
+  ],
+  "challenge": "challenge_00_data_readiness",
+  "cleaning_applied": true
+}

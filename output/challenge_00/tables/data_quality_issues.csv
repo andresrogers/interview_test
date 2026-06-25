@@ -1,0 +1,2 @@
+severity,dataset,check_name,row_count,details
+warning,usage,off_hour_timestamps,13,Found 13 off-hour `Unused Commitment` rows; analysis uses normalized hourly buckets while preserving raw timestamps.
