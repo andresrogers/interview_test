@@ -1,0 +1,33 @@
+{
+  "challenge": "challenge_05_audit_commitments",
+  "trust_level": "medium",
+  "warnings": [
+    "Found 13 off-hour `Unused Commitment` rows; analysis uses normalized hourly buckets while preserving raw timestamps.",
+    "Excluded partial billing periods from commitment audit: 2026-06"
+  ],
+  "window": {
+    "billing_periods_included": [
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "billing_periods_excluded_partial": [
+      "2026-06"
+    ]
+  },
+  "headline": {
+    "commitment_count": 29,
+    "over_committed_count": 2,
+    "under_committed_count": 27,
+    "well_sized_count": 0,
+    "portfolio_coverage_rate": 0.291403479632146,
+    "portfolio_utilization": 0.9724186148858942,
+    "total_paid_commitment": 56439.64091868181,
+    "total_consumed_commitment": 54882.9574468018,
+    "total_unused_commitment_waste": 1556.6834718800003
+  },
+  "reconciliation": {
+    "monthly_paid_commitment_gap": 1.4551915228366852e-11,
+    "consumed_plus_unused_gap": 7.275957614183426e-12
+  }
+}
