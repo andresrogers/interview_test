@@ -1,0 +1,68 @@
+{
+  "challenge": "challenge_04_baseline_realized_savings",
+  "trust_level": "medium",
+  "warnings": [
+    "Found 13 off-hour `Unused Commitment` rows; analysis uses normalized hourly buckets while preserving raw timestamps.",
+    "Excluded partial billing periods from backtest: 2026-06"
+  ],
+  "window": {
+    "baseline_anchor_period": "2025-08",
+    "baseline_anchor_timestamp": "2025-08-31T23:00:00",
+    "forward_periods": [
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "excluded_partial_periods": [
+      "2026-06"
+    ]
+  },
+  "headline": {
+    "baseline": {
+      "commitment_per_hour": 18.773055687904968,
+      "total_savings_dollars": 70120.35350998226,
+      "total_unused_commitment_waste": 13348.360777814754,
+      "total_consumed_commitment": 109652.7000893487,
+      "total_paid_commitment": 123001.06086715336,
+      "total_eligible_on_demand_cost": 229419.6466842647,
+      "total_covered_on_demand_cost": 193121.41437713502,
+      "effective_savings_rate": 0.3056423219345479,
+      "coverage_rate": 0.8417823720342287,
+      "average_utilization": 0.8914776776419718,
+      "total_gross_savings_dollars": 83468.71428779705
+    },
+    "optimal": {
+      "commitment_per_hour": 21.256840080555264,
+      "total_savings_dollars": 70463.22401202738,
+      "total_unused_commitment_waste": 19603.645302011366,
+      "total_consumed_commitment": 119671.17090579993,
+      "total_paid_commitment": 139274.81620779808,
+      "total_eligible_on_demand_cost": 229419.6466842647,
+      "total_covered_on_demand_cost": 209738.04021982563,
+      "effective_savings_rate": 0.30713683431393873,
+      "coverage_rate": 0.914211329548748,
+      "average_utilization": 0.8592448668340046,
+      "total_gross_savings_dollars": 90066.86931403873
+    },
+    "savings_gap_dollars": 342.87050204511615,
+    "effective_savings_rate_gap": 0.0014945123793908555
+  },
+  "reconciliation": {
+    "baseline": {
+      "monthly_net_savings_gap": 1.4551915228366852e-11,
+      "covered_plus_uncovered_gap": 0.0,
+      "consumed_plus_unused_gap": 1.4551915228366852e-11
+    },
+    "optimal": {
+      "monthly_net_savings_gap": 5.820766091346741e-11,
+      "covered_plus_uncovered_gap": 0.0,
+      "consumed_plus_unused_gap": 2.9103830456733704e-11
+    }
+  }
+}

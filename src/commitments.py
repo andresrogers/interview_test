@@ -167,6 +167,22 @@ def optimize_commitment(hourly_inputs: list[dict[str, Any]]) -> tuple[pd.DataFra
     return curve, optimum
 
 
+def commitment_frontier(
+    candidate_commitments: list[float] | np.ndarray,
+    hourly_inputs: list[dict[str, Any]],
+) -> pd.DataFrame:
+    rows = []
+    seen = set()
+    for candidate in candidate_commitments:
+        commitment = float(candidate)
+        rounded = round(commitment, 9)
+        if rounded in seen:
+            continue
+        seen.add(rounded)
+        rows.append(evaluate_commitment(commitment, hourly_inputs))
+    return pd.DataFrame(rows).sort_values("commitment_per_hour").reset_index(drop=True)
+
+
 def hourly_summary(commitment_per_hour: float, hourly_inputs: list[dict[str, Any]]) -> pd.DataFrame:
     rows = []
     for hour in hourly_inputs:
