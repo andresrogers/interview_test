@@ -5,6 +5,7 @@ import pandas as pd
 import pytest
 
 from src.cost_data import load_pricing, load_usage
+from src.challenge_03 import build_window_specs
 from src.challenge_02 import choose_analysis_window, validate_optimizer_inputs
 from src.data_quality import (
     billing_period_completeness,
@@ -170,3 +171,13 @@ def test_challenge_02_validation_reports_invalid_optimizer_rows() -> None:
     assert len(quarantined) == 1
     assert "duplicate price_list_key" in warnings[0]
     assert "Quarantined 1 compute rows" in warnings[1]
+
+
+def test_challenge_03_window_specs_use_complete_periods_only() -> None:
+    specs = build_window_specs(["2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06"])
+
+    labels = [spec["window_label"] for spec in specs]
+
+    assert "trailing_06m" in labels
+    assert "anchored_2025-01_to_2025-03" in labels
+    assert "anchored_2025-04_to_2025-06" in labels
