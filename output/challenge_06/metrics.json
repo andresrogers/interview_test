@@ -1,0 +1,30 @@
+{
+  "challenge": "challenge_06_coverage_utilization_frontier",
+  "trust_level": "medium",
+  "warnings": [
+    "Found 13 off-hour `Unused Commitment` rows; analysis uses normalized hourly buckets while preserving raw timestamps.",
+    "Frontier output was thinned from 263,290 exact breakpoints to 251 plotted points to keep runtime and charts usable."
+  ],
+  "frontier": {
+    "exact_breakpoint_count": 263290,
+    "plotted_point_count": 251,
+    "thinned_for_output": true
+  },
+  "headline": {
+    "optimal_commitment_per_hour": 23.124450182249255,
+    "optimal_total_savings_dollars": 38581.663414534836,
+    "recommended_commitment_per_hour": 21.50643698548525,
+    "recommended_total_savings_dollars": 37156.94492803377,
+    "recommended_coverage_rate": 0.8877029711401183,
+    "recommended_average_utilization": 1.000000000000023
+  },
+  "current_posture": {
+    "commitment_per_hour": 19.45540940669919,
+    "coverage_rate": 0.7998024123010277,
+    "average_utilization": 1.0,
+    "total_savings_dollars": 33304.228253051486,
+    "total_paid_commitment": 42957.54396999181,
+    "total_consumed_commitment": 42957.54396999181,
+    "total_unused_commitment_waste": 0.0
+  }
+}
