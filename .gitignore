@@ -25,3 +25,6 @@ planning/
 .opencode/
 .serena/
 .pytest_cache/
+# Large generated outputs (too large for GitHub)
+/output/challenge_04/tables/compute_backtest_input.csv
+/output/challenge_05/tables/commitment_audit_rows.csv
