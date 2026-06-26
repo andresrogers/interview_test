@@ -49,9 +49,6 @@ queries expect them):
 - `output/candidate_dataset.parquet` — hourly cost & usage
 - `output/pricing_options_filtered.parquet` — commitment pricing
 
-**Don't have the data?** Email **engineering@cloudcapital.co** to request a
-pre-signed download link (valid for one week).
-
 ## Where to go
 
 | | |
