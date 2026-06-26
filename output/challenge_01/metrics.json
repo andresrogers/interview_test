@@ -24,16 +24,16 @@
     ]
   },
   "headline": {
-    "on_demand_cost": 963836.6515702405,
-    "amortized_cost": 852808.2218011242,
-    "savings_dollars": 111028.42976911634,
-    "effective_savings_rate": 0.11519423917759683,
-    "commitment_savings_dollars": 105826.33104474697,
-    "spot_savings_vs_on_demand_dollars": 6873.120658379488,
+    "on_demand_cost": 963836.6515702177,
+    "amortized_cost": 852808.2218011138,
+    "savings_dollars": 111028.42976910388,
+    "effective_savings_rate": 0.11519423917758663,
+    "commitment_savings_dollars": 105826.33104474601,
+    "spot_savings_vs_on_demand_dollars": 6873.120658379496,
     "waste_dollars": 7001.9031126425,
-    "other_reconciliation_dollars": 5330.881178618196
+    "other_reconciliation_dollars": 5330.881178614341
   },
   "reconciliation": {
-    "monthly_savings_minus_headline_savings": 2.9103830456733704e-11
+    "monthly_savings_minus_headline_savings": -2.9103830456733704e-11
   }
 }
