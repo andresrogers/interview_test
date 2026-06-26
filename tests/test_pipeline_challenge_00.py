@@ -57,12 +57,12 @@ def _patch_pipeline(monkeypatch, module, usage_path: Path, pricing_path: Path, o
     monkeypatch.setattr(module, "PLOTS", output / "plots")
 
     def load_usage(con, path=usage_path, view_name="usage"):
-        escaped = str(path).replace("'", "''")
+        escaped = str(usage_path).replace("'", "''")
         con.execute(f"create or replace view {view_name} as select * from read_parquet('{escaped}')")
         return view_name
 
     def load_pricing(con, path=pricing_path, view_name="pricing"):
-        escaped = str(path).replace("'", "''")
+        escaped = str(pricing_path).replace("'", "''")
         con.execute(f"create or replace view {view_name} as select * from read_parquet('{escaped}')")
         return view_name
 
@@ -78,6 +78,23 @@ def test_challenge_00_pipeline_writes_expected_outputs(tmp_path: Path, monkeypat
     write_parquet(pricing_path, pricing_frame())
     _patch_pipeline(monkeypatch, challenge_00, usage_path, pricing_path, output)
 
+    captured_plots: dict[str, list[list[str]]] = {}
+    current_plot_lines: list[list[str]] = []
+    original_plot = challenge_00.plt.plot
+    original_savefig = challenge_00.plt.savefig
+
+    def capture_plot(x, *args, **kwargs):
+        current_plot_lines.append([str(value) for value in list(x)])
+        return original_plot(x, *args, **kwargs)
+
+    def capture_savefig(path, *args, **kwargs):
+        captured_plots[Path(path).name] = list(current_plot_lines)
+        current_plot_lines.clear()
+        return original_savefig(path, *args, **kwargs)
+
+    monkeypatch.setattr(challenge_00.plt, "plot", capture_plot)
+    monkeypatch.setattr(challenge_00.plt, "savefig", capture_savefig)
+
     challenge_00.main()
 
     assert (output / "summary.md").exists()
@@ -85,9 +102,24 @@ def test_challenge_00_pipeline_writes_expected_outputs(tmp_path: Path, monkeypat
     assert (output / "understanding_ledger.md").exists()
     assert (output / "metrics.json").exists()
     assert (output / "tables" / "data_quality_issues.csv").exists()
+    assert (output / "tables" / "monthly_aws_load_trend.csv").exists()
+    assert (output / "tables" / "duplicate_check_summary.csv").exists()
+    assert (output / "tables" / "numeric_sanity_check_summary.csv").exists()
+    assert (output / "tables" / "pricing_key_coverage_summary.csv").exists()
     assert (output / "plots" / "monthly_row_counts.png").exists()
+    assert (output / "plots" / "monthly_aws_load_trend.png").exists()
+    assert (output / "plots" / "monthly_aws_load_trend_by_service.png").exists()
 
     metrics = json.loads((output / "metrics.json").read_text(encoding="utf-8"))
     assert metrics["cleaning_applied"] is True
     assert "trust_level" in metrics
     assert "warnings" in metrics
+    assert metrics["trend"]["excluded_last_incomplete_month"] is True
+
+    trend = pd.read_csv(output / "tables" / "monthly_aws_load_trend.csv")
+    assert trend.loc[trend["month"] == "2025-08", "is_complete_month"].item() == False
+    assert captured_plots["monthly_cost_profile.png"] == [["2025-07"], ["2025-07"]]
+    assert captured_plots["monthly_aws_load_trend.png"] == [["2025-07"]]
+
+    summary = (output / "summary.md").read_text(encoding="utf-8")
+    assert "Last observed month excluded from trend interpretation" in summary

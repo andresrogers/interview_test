@@ -24,7 +24,7 @@ Simple per-challenge scripts that load data, run one analysis, and write present
 
 ## Dependency Rules
 Allowed:
-- `duckdb`, `pandas`, `matplotlib`, stdlib.
+- `duckdb`, `pandas`, `matplotlib`, `stdlib`.
 - Shared helpers from `src/`.
 
 Forbidden:

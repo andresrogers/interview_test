@@ -74,9 +74,12 @@ def main() -> None:
     plt.savefig(PLOTS / "monthly_row_counts.png")
     plt.close()
 
+    complete_periods = outputs["periods"].loc[outputs["periods"]["is_complete"], "billing_period"]
+    monthly_complete = outputs["monthly"].loc[outputs["monthly"]["billing_period"].isin(complete_periods)]
+
     plt.figure(figsize=(8, 4))
-    plt.plot(outputs["monthly"]["billing_period"], outputs["monthly"]["on_demand_cost"], marker="o", label="on_demand_cost")
-    plt.plot(outputs["monthly"]["billing_period"], outputs["monthly"]["amortized_cost"], marker="o", label="amortized_cost")
+    plt.plot(monthly_complete["billing_period"], monthly_complete["on_demand_cost"], marker="o", label="on_demand_cost")
+    plt.plot(monthly_complete["billing_period"], monthly_complete["amortized_cost"], marker="o", label="amortized_cost")
     plt.xticks(rotation=45, ha="right")
     plt.ylabel("cost ($)")
     plt.title("Monthly cost profile")
@@ -84,6 +87,29 @@ def main() -> None:
     plt.tight_layout()
     plt.savefig(PLOTS / "monthly_cost_profile.png")
     plt.close()
+
+    trend = outputs["monthly_trend"].loc[outputs["monthly_trend"]["is_complete_month"]]
+    plt.figure(figsize=(8, 4))
+    plt.plot(trend["month"], trend["total_on_demand_cost"], marker="o")
+    plt.xticks(rotation=45, ha="right")
+    plt.ylabel("on-demand cost ($)")
+    plt.title("Monthly AWS load trend")
+    plt.tight_layout()
+    plt.savefig(PLOTS / "monthly_aws_load_trend.png")
+    plt.close()
+
+    trend_by_service = outputs["monthly_trend_by_service"]
+    if not trend_by_service.empty:
+        plt.figure(figsize=(9, 4))
+        for product_code, frame in trend_by_service.groupby("product_code"):
+            plt.plot(frame["month"], frame["total_on_demand_cost"], marker="o", label=product_code)
+        plt.xticks(rotation=45, ha="right")
+        plt.ylabel("on-demand cost ($)")
+        plt.title("Monthly AWS load trend by top services")
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig(PLOTS / "monthly_aws_load_trend_by_service.png")
+        plt.close()
 
     write_text(OUTPUT / "metrics.json", json.dumps(metrics, indent=2))
     for name, text in build_report_texts(metrics).items():

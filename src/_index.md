@@ -21,6 +21,8 @@ Shared helpers for loading parquet data, preparing a readiness-safe analysis vie
 | `metrics.py` | Minimal effective savings plus coverage/utilization helpers. | `effective_savings_metrics`, `add_effective_savings_columns`, `coverage_rate`, `utilization_rate` |
 | `commitments.py` | Hourly commitment allocation and optimization helpers. | `build_hourly_inputs`, `evaluate_commitment`, `optimize_commitment`, `hourly_summary` |
 | `challenge_00.py` | Reusable Challenge 0 readiness collection and report text. | `collect_outputs`, `build_metrics`, `write_tables`, `build_report_texts` |
+| `challenge_00_diagnostics.py` | Challenge 0 trend and report-only diagnostic tables. | `monthly_aws_load_trend`, `duplicate_check_outputs`, `pricing_key_coverage_outputs` |
+| `challenge_00_duplicates.py` | Challenge 0 duplicate summaries and samples. | `duplicate_check_outputs` |
 | `challenge_01.py` | Reusable Challenge 1 aggregations and report text. | `choose_analysis_window`, `collect_outputs`, `build_metrics`, `build_report_texts` |
 | `challenge_02.py` | Reusable Challenge 2 windowing, validation, metrics, and report text. | `choose_analysis_window`, `validate_optimizer_inputs`, `build_metrics`, `build_report_texts` |
 | `challenge_03.py` | Reusable Challenge 3 window definitions, metrics, and report text. | `build_window_specs`, `monthly_regime_summary`, `build_metrics`, `build_report_texts` |
