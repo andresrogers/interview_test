@@ -34,6 +34,7 @@ if str(ROOT) not in sys.path:
 
 import matplotlib.pyplot as plt
 import pandas as pd
+from matplotlib.ticker import PercentFormatter
 
 from src.challenge_02 import (
     analysis_hours,
@@ -43,8 +44,16 @@ from src.challenge_02 import (
     valid_optimizer_rows,
     validate_optimizer_inputs,
 )
-from src.challenge_06 import build_metrics, build_report_texts, current_commitment_posture_from_inventory
-from src.commitments import build_hourly_inputs, commitment_frontier, optimize_commitment
+from src.challenge_06 import (
+    build_metrics,
+    build_report_texts,
+    current_commitment_posture_from_inventory,
+)
+from src.commitments import (
+    build_hourly_inputs,
+    commitment_frontier,
+    optimize_commitment,
+)
 from src.cost_data import connect, load_pricing, load_usage
 from src.data_quality import (
     assert_no_fatal_issues,
@@ -84,7 +93,9 @@ def frontier_candidates(curve, max_points: int = 251) -> list[float]:
     if len(commitments) <= max_points:
         return commitments
     last_index = len(commitments) - 1
-    sampled_positions = [round(step * last_index / (max_points - 1)) for step in range(max_points)]
+    sampled_positions = [
+        round(step * last_index / (max_points - 1)) for step in range(max_points)
+    ]
     sampled = []
     seen = set()
     for position in sampled_positions:
@@ -108,12 +119,29 @@ def load_challenge_05_inventory(path: Path = CHALLENGE_05_INVENTORY) -> pd.DataF
 def plot_frontier(frontier, metrics) -> None:
     current = metrics["current_posture"]
     headline = metrics["headline"]
-    recommended = frontier.loc[frontier["commitment_per_hour"] == headline["recommended_commitment_per_hour"]].iloc[0]
+    recommended = frontier.loc[
+        frontier["commitment_per_hour"] == headline["recommended_commitment_per_hour"]
+    ].iloc[0]
     plt.figure(figsize=(8, 5))
-    plt.plot(frontier["coverage_rate"], frontier["average_utilization"], color="#1f77b4")
-    plt.scatter([recommended["coverage_rate"]], [recommended["average_utilization"]], color="#d62728", label="Recommended")
-    if current["coverage_rate"] is not None and current["average_utilization"] is not None:
-        plt.scatter([current["coverage_rate"]], [current["average_utilization"]], color="#2ca02c", label="Current")
+    plt.plot(
+        frontier["coverage_rate"], frontier["average_utilization"], color="#1f77b4"
+    )
+    plt.scatter(
+        [recommended["coverage_rate"]],
+        [recommended["average_utilization"]],
+        color="#d62728",
+        label="Recommended",
+    )
+    if (
+        current["coverage_rate"] is not None
+        and current["average_utilization"] is not None
+    ):
+        plt.scatter(
+            [current["coverage_rate"]],
+            [current["average_utilization"]],
+            color="#2ca02c",
+            label="Current",
+        )
     plt.xlabel("coverage rate")
     plt.ylabel("average utilization")
     plt.title("Coverage-utilization frontier")
@@ -125,18 +153,83 @@ def plot_frontier(frontier, metrics) -> None:
 
 def plot_bubble(frontier, metrics) -> None:
     current = metrics["current_posture"]
-    plt.figure(figsize=(8.5, 5))
-    sizes = frontier["total_savings_dollars"].clip(lower=0) * 2 + 20
-    plt.scatter(frontier["coverage_rate"], frontier["average_utilization"], s=sizes, c=frontier["commitment_per_hour"], cmap="viridis", alpha=0.7)
-    if current["coverage_rate"] is not None and current["average_utilization"] is not None:
-        plt.scatter([current["coverage_rate"]], [current["average_utilization"]], s=140, marker="X", color="#d62728")
-    plt.xlabel("coverage rate")
-    plt.ylabel("average utilization")
-    plt.title("Savings surface across frontier points")
-    colorbar = plt.colorbar()
+    plot_df = frontier.dropna(
+        subset=[
+            "coverage_rate",
+            "average_utilization",
+            "commitment_per_hour",
+            "total_savings_dollars",
+        ]
+    ).sort_values("commitment_per_hour")
+    if plot_df.empty:
+        return
+
+    max_savings = float(plot_df["total_savings_dollars"].clip(lower=0).max())
+    sizes = plot_df["total_savings_dollars"].clip(lower=0)
+    if max_savings > 0:
+        sizes = 40 + 260 * sizes / max_savings
+    else:
+        sizes = pd.Series(60.0, index=plot_df.index)
+
+    fig, ax = plt.subplots(figsize=(8.5, 5))
+    ax.plot(
+        plot_df["coverage_rate"],
+        plot_df["average_utilization"],
+        color="#25364a",
+        linewidth=1.2,
+        alpha=0.5,
+        label="Frontier path",
+    )
+    scatter = ax.scatter(
+        plot_df["coverage_rate"],
+        plot_df["average_utilization"],
+        s=sizes,
+        c=plot_df["commitment_per_hour"],
+        cmap="viridis",
+        alpha=0.8,
+        edgecolors="#25364a",
+        linewidths=0.4,
+        label="Candidate commitments",
+    )
+    best = plot_df.loc[plot_df["total_savings_dollars"].idxmax()]
+    ax.scatter(
+        [best["coverage_rate"]],
+        [best["average_utilization"]],
+        s=180,
+        marker="*",
+        color="#ff7f0e",
+        edgecolors="#25364a",
+        linewidths=0.8,
+        label="Max savings",
+        zorder=5,
+    )
+    if (
+        current["coverage_rate"] is not None
+        and current["average_utilization"] is not None
+    ):
+        ax.scatter(
+            [current["coverage_rate"]],
+            [current["average_utilization"]],
+            s=140,
+            marker="X",
+            color="#d62728",
+            edgecolors="#25364a",
+            linewidths=0.8,
+            label="Current posture",
+            zorder=6,
+        )
+    ax.set_xlabel("Coverage rate")
+    ax.set_ylabel("Average utilization")
+    ax.set_title("Commitment frontier: coverage vs utilization")
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0))
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0))
+    ax.grid(color="#d9e2ec", linewidth=0.8)
+    ax.set_axisbelow(True)
+    ax.legend(loc="lower right")
+    colorbar = fig.colorbar(scatter, ax=ax)
     colorbar.set_label("commitment ($/hour)")
     plt.tight_layout()
-    plt.savefig(PLOTS / "savings_coverage_utilization_3d_or_bubble.png")
+    plt.savefig(PLOTS / "savings_coverage_utilization_bubble.png")
     plt.close()
 
 
@@ -160,7 +253,9 @@ def main() -> None:
     periods = billing_period_completeness(con)
     included_periods, _, _ = choose_analysis_window(periods)
 
-    joined = load_optimizer_input(con, included_periods, TERM_MONTHS, PAYMENT_OPTION, OFFERING_CLASS)
+    joined = load_optimizer_input(
+        con, included_periods, TERM_MONTHS, PAYMENT_OPTION, OFFERING_CLASS
+    )
     eligible_usage = valid_optimizer_rows(joined)
     validation_warnings, _ = validate_optimizer_inputs(
         joined,
@@ -180,7 +275,9 @@ def main() -> None:
         float(eligible_usage["on_demand_cost"].to_numpy(dtype=float).sum()),
         len(hours),
     )
-    metrics = build_metrics(frontier, current, validation_warnings, exact_breakpoint_count, len(frontier))
+    metrics = build_metrics(
+        frontier, current, validation_warnings, exact_breakpoint_count, len(frontier)
+    )
 
     write_tables(periods, frontier)
     write_reports(metrics, frontier)
@@ -188,7 +285,9 @@ def main() -> None:
     plot_bubble(frontier, metrics)
 
     print(OUTPUT)
-    print(f"recommended_commitment_per_hour={metrics['headline']['recommended_commitment_per_hour']:.6f}")
+    print(
+        f"recommended_commitment_per_hour={metrics['headline']['recommended_commitment_per_hour']:.6f}"
+    )
 
 
 if __name__ == "__main__":

@@ -7,7 +7,9 @@ import pipeline.challenge_06_coverage_utilization_frontier as challenge_06
 
 
 def test_frontier_candidates_thin_to_251_points() -> None:
-    curve = pd.DataFrame({"commitment_per_hour": [float(value) for value in range(300)]})
+    curve = pd.DataFrame(
+        {"commitment_per_hour": [float(value) for value in range(300)]}
+    )
 
     candidates = challenge_06.frontier_candidates(curve)
 
@@ -35,19 +37,25 @@ def pricing_frame() -> pd.DataFrame:
     )
 
 
-def _patch_pipeline(monkeypatch, module, usage_path: Path, pricing_path: Path, output: Path) -> None:
+def _patch_pipeline(
+    monkeypatch, module, usage_path: Path, pricing_path: Path, output: Path
+) -> None:
     monkeypatch.setattr(module, "OUTPUT", output)
     monkeypatch.setattr(module, "TABLES", output / "tables")
     monkeypatch.setattr(module, "PLOTS", output / "plots")
 
     def load_usage(con, path=usage_path, view_name="usage"):
         escaped = str(path).replace("'", "''")
-        con.execute(f"create or replace view {view_name} as select * from read_parquet('{escaped}')")
+        con.execute(
+            f"create or replace view {view_name} as select * from read_parquet('{escaped}')"
+        )
         return view_name
 
     def load_pricing(con, path=pricing_path, view_name="pricing"):
         escaped = str(path).replace("'", "''")
-        con.execute(f"create or replace view {view_name} as select * from read_parquet('{escaped}')")
+        con.execute(
+            f"create or replace view {view_name} as select * from read_parquet('{escaped}')"
+        )
         return view_name
 
     monkeypatch.setattr(module, "load_usage", load_usage)
@@ -55,7 +63,9 @@ def _patch_pipeline(monkeypatch, module, usage_path: Path, pricing_path: Path, o
 
 
 def usage_frame() -> pd.DataFrame:
-    timestamps = list(pd.date_range("2025-01-01 00:00:00", "2025-03-31 23:00:00", freq="h"))
+    timestamps = list(
+        pd.date_range("2025-01-01 00:00:00", "2025-03-31 23:00:00", freq="h")
+    )
     rows = []
     for ts in timestamps:
         billing_period = ts.strftime("%Y-%m")
@@ -132,7 +142,9 @@ def inventory_frame() -> pd.DataFrame:
     )
 
 
-def test_challenge_06_pipeline_writes_expected_outputs(tmp_path: Path, monkeypatch) -> None:
+def test_challenge_06_pipeline_writes_expected_outputs(
+    tmp_path: Path, monkeypatch
+) -> None:
     usage_path = tmp_path / "usage.parquet"
     pricing_path = tmp_path / "pricing.parquet"
     output = tmp_path / "challenge_06"
@@ -151,7 +163,7 @@ def test_challenge_06_pipeline_writes_expected_outputs(tmp_path: Path, monkeypat
     assert (output / "metrics.json").exists()
     assert (output / "tables" / "frontier.csv").exists()
     assert (output / "plots" / "coverage_utilization_frontier.png").exists()
-    assert (output / "plots" / "savings_coverage_utilization_3d_or_bubble.png").exists()
+    assert (output / "plots" / "savings_coverage_utilization_bubble.png").exists()
 
     metrics = json.loads((output / "metrics.json").read_text(encoding="utf-8"))
     assert "trust_level" in metrics
