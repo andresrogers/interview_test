@@ -24,5 +24,30 @@
     "2026-06"
   ],
   "challenge": "challenge_00_data_readiness",
-  "cleaning_applied": true
+  "cleaning_applied": true,
+  "trend": {
+    "trend_direction": "growing",
+    "trend_months": [
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "excluded_last_incomplete_month": true
+  },
+  "exact_duplicate_rows": 0,
+  "duplicate_hourly_line_keys": 108029,
+  "numeric_anomaly_rows": 0,
+  "unexpected_cost_type_values": [],
+  "unexpected_commitment_prefixes": [],
+  "commitment_consistency_failures": 0,
+  "missing_pricing_rows": 19294842,
+  "missing_pricing_share": 0.8127700681818364
 }

@@ -1,0 +1,21 @@
+analysis_timestamp,billing_period,product_code,usage_type,instance_type,account_id,price_list_key,commitment,commitment_key,cost_type,usage_amount,on_demand_cost,amortized_cost
+2026-06-01,2026-06,AmazonRDS,EUC1-HeavyUsage:db.m6g.large,db.m6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2022-02-14-20-06-54-687,None,Unused Commitment,7200.0,0.0,915.304
+2026-06-01,2026-06,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-11-12-21-07-48-094,None,Unused Commitment,4189.5722222222,0.0,682.36235834
+2025-08-01,2025-08,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3720.0,0.0,675.18
+2026-01-01,2026-01,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3720.0,0.0,675.18
+2025-07-01,2025-07,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3720.0,0.0,675.18
+2025-10-01,2025-10,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3720.0,0.0,675.18
+2025-12-01,2025-12,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3720.0,0.0,675.18
+2026-03-01,2026-03,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3720.0,0.0,675.18
+2025-09-01,2025-09,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3600.0,0.0,653.4
+2026-02-01,2026-02,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3360.0,0.0,609.84
+2026-04-01,2026-04,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3600.0,0.0,563.52987316
+2026-06-01,2026-06,AmazonDynamoDB,EUC1-TimedBackupStorage-ByteHrs,,729805027010,,,None,On Demand Usage,4545.8363382855005,556.4103678060001,556.4103678060001
+2026-04-01,2026-04,AmazonDynamoDB,EUC1-TimedBackupStorage-ByteHrs,,729805027010,,,None,On Demand Usage,4545.836337559101,556.4103677171001,556.4103677171001
+2026-03-01,2026-03,AmazonDynamoDB,EUC1-TimedBackupStorage-ByteHrs,,729805027010,,,None,On Demand Usage,4545.8363375591,556.4103677170999,556.4103677170999
+2026-05-01,2026-05,AmazonDynamoDB,EUC1-TimedBackupStorage-ByteHrs,,729805027010,,,None,On Demand Usage,4545.836337559098,556.4103677170999,556.4103677170999
+2026-02-01,2026-02,AmazonDynamoDB,EUC1-TimedBackupStorage-ByteHrs,,729805027010,,,None,On Demand Usage,4545.8363375591,556.4103677170998,556.4103677170998
+2026-06-01,2026-06,AmazonRDS,EUC1-HeavyUsage:db.m6g.large,db.m6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2024-12-03-10-40-13-420,None,Unused Commitment,3600.0,0.0,457.652
+2025-11-01,2025-11,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,3600.0,0.0,375.09233731
+2026-06-01,2026-06,AmazonRDS,EUC1-HeavyUsage:db.t4g.large,db.t4g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-09-08-19-50-58-286,None,Unused Commitment,3770.615,0.0,342.396538
+2026-05-01,2026-05,AmazonRDS,EUC1-HeavyUsage:db.r6g.large,db.r6g.large,559750980952,,arn:aws:rds:eu-central-1:559750980952:ri:ri-2025-01-13-06-24-24-124,None,Unused Commitment,1641.6277777778,0.0,297.95544167

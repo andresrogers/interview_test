@@ -16,6 +16,7 @@ Dataset ready for analysis: yes
 - Off-hour timestamps, negative values, and non-finite costs.
 - Null profile by column.
 - Monthly row and cost profile.
+- Monthly on-demand-equivalent load trend, duplicate checks, ratio diagnostics, commitment consistency, and pricing key coverage.
 
 ## Cleaning Applied
 
@@ -26,6 +27,18 @@ Dataset ready for analysis: yes
 ## Anomaly Review Note
 
 No fatal anomaly found. The notable data artifact was off-hour `Unused Commitment` rows, and 13 rows were normalized into `analysis_timestamp` while preserving `source_timestamp`.
+
+## Additional Diagnostics
+
+- Monthly AWS demand trend from complete months: growing across 2025-07 to 2026-05.
+- Last observed month excluded from trend interpretation: yes.
+- Exact duplicate rows: 0.
+- Duplicate hourly line keys: 108,029.
+- Numeric anomaly rows across explicit sanity checks: 0.
+- Unexpected `cost_type` values: none.
+- Unexpected `commitment_key` prefixes: none.
+- Commitment consistency failures: 0.
+- Usage rows missing pricing matches: 19,294,842 (81.28%).
 
 ## Assumptions And Risks
 

@@ -1,0 +1,11 @@
+category,value,row_count,is_expected
+cost_type,On Demand Usage,20062471,True
+cost_type,Spot Usage,29886,True
+cost_type,Unused Commitment,69969,True
+cost_type,Usage with Discount,739202,True
+commitment_key_prefix,None,19254628,True
+commitment_key_prefix,AWS#Compute,935036,True
+commitment_key_prefix,AWS#Database,288252,True
+commitment_key_prefix,AWS#AmazonRDS-Database Instance,265279,True
+commitment_key_prefix,AWS#AmazonElastiCache-Cache Instance,125771,True
+commitment_key_prefix,AWS#AmazonES-Amazon OpenSearch Service Instance,32562,True

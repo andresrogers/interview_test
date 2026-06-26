@@ -1,0 +1,3 @@
+check_name,duplicate_count,duplicate_share,key_columns_used
+exact_full_row_duplicates,0,0.0,all columns
+duplicate_hourly_line_keys,108029,0.005168473807273803,"analysis_timestamp, billing_period, product_code, usage_type, account_id, price_list_key, commitment_key, cost_type"

@@ -1,0 +1,8 @@
+check_name,failing_rows,failing_share
+non_finite_usage_amount,0,0.0
+non_finite_on_demand_cost,0,0.0
+non_finite_amortized_cost,0,0.0
+zero_usage_with_nonzero_cost,0,0.0
+negative_usage_amount,0,0.0
+negative_on_demand_cost,0,0.0
+negative_amortized_cost,0,0.0

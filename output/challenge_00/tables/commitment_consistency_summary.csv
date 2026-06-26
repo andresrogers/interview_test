@@ -1,0 +1,4 @@
+check_name,failing_rows,failing_share,linkage_field_used
+usage_with_discount_missing_linkage,0,0.0,commitment
+unused_commitment_missing_linkage,0,0.0,commitment
+covered_rows_amortized_gt_on_demand,0,0.0,commitment

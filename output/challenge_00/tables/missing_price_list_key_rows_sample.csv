@@ -1,0 +1,21 @@
+timestamp,billing_period,product_code,usage_type,instance_type,usage_amount,on_demand_cost,amortized_cost,price_list_key,commitment_key,account_id,commitment,cost_type,baseline_covered,baseline_max,source_timestamp,analysis_timestamp,timestamp_was_normalized
+2025-07-02 02:00:00,2025-07,ACM,USE1-IssuePublicCertificateDomain,,1.0,0.0,0.0,,None,278910047256,,On Demand Usage,,,2025-07-02 02:00:00,2025-07-02 02:00:00,False
+2025-07-24 03:00:00,2025-07,ACM,USE1-IssuePublicCertificateDomain,,1.0,0.0,0.0,,None,298140436223,,On Demand Usage,,,2025-07-24 03:00:00,2025-07-24 03:00:00,False
+2025-07-05 00:00:00,2025-07,ACM,EUC1-IssuePublicCertificateWildcardDomain,,1.0,0.0,0.0,,None,299786502377,,On Demand Usage,,,2025-07-05 00:00:00,2025-07-05 00:00:00,False
+2025-07-13 03:00:00,2025-07,ACM,USE1-IssuePublicCertificateDomain,,2.0,0.0,0.0,,None,438687611351,,On Demand Usage,,,2025-07-13 03:00:00,2025-07-13 03:00:00,False
+2025-07-01 09:00:00,2025-07,ACM,USE1-IssuePublicCertificateDomain,,1.0,0.0,0.0,,None,493188804327,,On Demand Usage,,,2025-07-01 09:00:00,2025-07-01 09:00:00,False
+2025-07-02 13:00:00,2025-07,ACM,USE1-IssuePublicCertificateDomain,,2.0,0.0,0.0,,None,571459116317,,On Demand Usage,,,2025-07-02 13:00:00,2025-07-02 13:00:00,False
+2025-07-01 07:00:00,2025-07,ACM,USE1-IssuePublicCertificateDomain,,1.0,0.0,0.0,,None,493188804327,,On Demand Usage,,,2025-07-01 07:00:00,2025-07-01 07:00:00,False
+2025-07-14 10:00:00,2025-07,ACM,USE1-IssuePublicCertificateDomain,,1.0,0.0,0.0,,None,493188804327,,On Demand Usage,,,2025-07-14 10:00:00,2025-07-14 10:00:00,False
+2025-07-09 22:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,1.2349e-06,1.852e-07,1.852e-07,,None,298140436223,,On Demand Usage,,,2025-07-09 22:00:00,2025-07-09 22:00:00,False
+2025-07-23 23:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,8.885e-07,1.333e-07,1.333e-07,,None,298140436223,,On Demand Usage,,,2025-07-23 23:00:00,2025-07-23 23:00:00,False
+2025-07-12 01:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,3.111e-07,4.67e-08,4.67e-08,,None,298140436223,,On Demand Usage,,,2025-07-12 01:00:00,2025-07-12 01:00:00,False
+2025-07-25 20:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,8.782e-07,1.317e-07,1.317e-07,,None,298140436223,,On Demand Usage,,,2025-07-25 20:00:00,2025-07-25 20:00:00,False
+2025-07-15 14:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,0.0002230778,3.3461700000000005e-05,3.3461700000000005e-05,,None,298140436223,,On Demand Usage,,,2025-07-15 14:00:00,2025-07-15 14:00:00,False
+2025-07-15 17:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,2.0238e-06,3.036e-07,3.036e-07,,None,298140436223,,On Demand Usage,,,2025-07-15 17:00:00,2025-07-15 17:00:00,False
+2025-07-12 08:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,5.672e-07,8.51e-08,8.51e-08,,None,298140436223,,On Demand Usage,,,2025-07-12 08:00:00,2025-07-12 08:00:00,False
+2025-07-25 18:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,3.111e-07,4.67e-08,4.67e-08,,None,298140436223,,On Demand Usage,,,2025-07-25 18:00:00,2025-07-25 18:00:00,False
+2025-07-06 15:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,6.221e-07,9.33e-08,9.33e-08,,None,298140436223,,On Demand Usage,,,2025-07-06 15:00:00,2025-07-06 15:00:00,False
+2025-07-10 02:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,3.70163e-05,5.5524e-06,5.5524e-06,,None,298140436223,,On Demand Usage,,,2025-07-10 02:00:00,2025-07-10 02:00:00,False
+2025-07-06 13:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,6.221e-07,9.33e-08,9.33e-08,,None,298140436223,,On Demand Usage,,,2025-07-06 13:00:00,2025-07-06 13:00:00,False
+2025-07-12 04:00:00,2025-07,AWSAmplify,EUC1-DataTransferOut,,3.064e-07,4.6e-08,4.6e-08,,None,298140436223,,On Demand Usage,,,2025-07-12 04:00:00,2025-07-12 04:00:00,False
